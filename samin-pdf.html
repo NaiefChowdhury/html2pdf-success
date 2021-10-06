@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="html2pdf.bundle.js"></script>
+</head>
+<body>
+    <div id="invoice">
+        <h1>Hello</h1>
+    </div>
+    <button onclick="hello()"> SAVE </button>
+    <script>
+        function hello() {
+            const invoice = document.querySelector("#invoice");
+            console.log(invoice);
+            html2pdf().from(invoice).save();
+        }
+    </script>
+</body>
+</html>
